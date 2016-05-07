@@ -1,0 +1,8 @@
+[package]
+name = "summon-keepass"
+version = "0.1.0"
+authors = ["Marcin Skarbek <git@skarbek.name>"]
+
+[dependencies]
+keepass = "0.1.2"
+rust-ini = "0.9.4"
