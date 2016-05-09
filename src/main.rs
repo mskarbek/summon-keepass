@@ -16,7 +16,7 @@ fn main() {
 
     let args: Vec<_> = env::args_os().collect();
     if args.len() <= 1 {
-        err_handle.write(b"No variable was provided.").unwrap();
+        err_handle.write(b"no variable was provided").unwrap();
         err_handle.flush().unwrap();
         process::exit(1);
     }
@@ -41,7 +41,7 @@ fn main() {
     loop {
         if pass_path.len() == 0 {
             for entry in &current_group.entries {
-                if entry.get_title().unwrap() == current_path {
+                if entry.get_username().unwrap() == current_path {
                     out_handle.write(entry.get_password().unwrap().as_bytes()).unwrap();
                     out_handle.flush().unwrap();
                     process::exit(0);
@@ -54,7 +54,8 @@ fn main() {
         else {
             for group in &current_group.child_groups {
                 if group.name == current_path {
-                    current_group = group
+                    current_group = group;
+                    break;
                 }
             }
             current_path = pass_path.remove(0);
