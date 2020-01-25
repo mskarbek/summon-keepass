@@ -6,7 +6,7 @@ Simple [summon](https://conjurinc.github.io/summon/) provider that allows usage 
 Installation
 -----
 
-Download the tar file from the [latest release](releases), extract it and provide the executable to summon ([as per their docs](https://github.com/cyberark/summon/blob/master/provider/README.md)). Placing it in `/usr/local/lib/summon` is the easiest method.
+Download the tar file from the [latest release](../../releases), extract it and provide the executable to summon ([as per their docs](https://github.com/cyberark/summon/blob/master/provider/README.md)). Placing it in `/usr/local/lib/summon` is the easiest method.
 
 Create `.summon-keepass.ini` file in your `$HOME` directory with the following content:
 
